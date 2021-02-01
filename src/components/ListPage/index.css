@@ -1,0 +1,53 @@
+.listPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.list{
+    width: 50%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.listElement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    transition: background .2s linear;
+}
+
+.listElement:last-child{
+    border-bottom: none;
+}
+
+.actions button:first-child{
+    margin-right: 10px;
+}
+
+.listText{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    font-size: 16px;
+    transition: color .2s linear;
+}
+.listText input{
+    margin-right: 10px;
+}
+
+.editInput{
+    padding: 0px 10px;
+    margin-left: 10px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+}

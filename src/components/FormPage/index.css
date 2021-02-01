@@ -1,0 +1,32 @@
+.homePage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    width: 50%;
+    display: flex;
+}
+
+.form input {
+    width: 80%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid firebrick;
+    border-right: none;
+}
+.form button {
+    width: 20%;
+    background-color: transparent;
+    outline: none;
+    color: firebrick;
+    border: 1px solid firebrick;
+    transition: background .15s linear;
+    font-size: 15px;
+}
+
+.form button:hover {
+    background-color: firebrick;
+    color: #fff;
+}
