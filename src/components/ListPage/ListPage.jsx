@@ -24,9 +24,9 @@ const ListPage = observer(() => {
     return (
         <div className='listPage'>
             <div className="list">
-                {todo.list.length !== 0 
+                {todo?.list?.length
                 ? 
-                    todo.list.map(el => <ListElement key={el.id} el={el} onDelete={onDelete} onEdit={onEdit} onToggle={onToggle}/>)
+                    todo.list.map(el => <ListElement key={el.id} {...el} onDelete={onDelete} onEdit={onEdit} onToggle={onToggle}/>)
                 :   
                     <div>List is empty</div>    
                 }

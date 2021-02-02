@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 
-export const ListElement = ({ el }) => {
-    const { id, text, isDone, onDelete, onEdit, onToggle } = el
+export const ListElement = ({ id, text, isDone, onDelete, onEdit, onToggle }) => {
     const [editMode, setEditMode] = useState(false)
     const [value, setValue] = useState(text)
-
+    
     const onHandlerSave = () => {
         onEdit(id, value)
         setEditMode(false)
     }
 
     return (
-        <div className="listElement" style={{background: isDone && 'firebrick'}}>
+        <div className="listElement" style={{background: isDone ? 'firebrick' : 'unset'}}>
             {!editMode ?
                 <>
-                    <div className='listText' style={{color: isDone && '#fff'}}>
+                    <div className='listText' style={{color: isDone ? '#fff' : 'unset'}}>
                         <input className='toggleInput' onChange={() => onToggle(id)} checked={isDone} type='checkbox'/>
                         {text}
                     </div>
